@@ -1,0 +1,24 @@
+parameters:
+    eduardo_ledo_jquery_load.fragment.renderer.jqload.global_template: null
+
+services:
+    eduardo_ledo_j_query_load:
+        class: EduardoLedo\JQueryLoadBundle\Fragment\JQueryLoadFragmentRenderer
+        public: true
+        arguments:
+          - '@templating'
+          - '@uri_signer'
+          - ''
+          - ''
+        calls:
+          - method: setFragmentPath
+            arguments:
+                - '%fragment.path%'
+        tags:
+            - { name: kernel.fragment_renderer, alias: jqload }
+
+    eduardo_ledo_jquery_load.twig.extension:
+        class: EduardoLedo\JQueryLoadBundle\Twig\JQueryLoadExtension
+        public: true
+        tags:
+            - { name: twig.extension }
