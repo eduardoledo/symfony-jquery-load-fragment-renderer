@@ -16,7 +16,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "EduardoLedo\\JQueryLoadBundle": "src/EduardoLedo/JQueryLoadBundle"
+      "EduardoLedo\\JQueryLoadBundle\\": "src/EduardoLedo/JQueryLoadBundle/"
     }
   }
 }
